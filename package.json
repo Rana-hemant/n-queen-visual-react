@@ -1,7 +1,7 @@
 {
     "name": "n-queen-visualizer",
     "version": "1.0.0",
-    "homepage": "https://Rana-hemant.github.io/N-Queen-Visualizer",
+    "homepage": "https://Rana-hemant.github.io/n-queen-visual-react",
     "description": "",
     "keywords": [],
     "main": "src/index.js",
