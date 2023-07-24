@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/n-queen-visual-react/static/css/main.b22df3b2.css",
+    "main.js": "/n-queen-visual-react/static/js/main.7b18568c.js",
+    "index.html": "/n-queen-visual-react/index.html",
+    "main.b22df3b2.css.map": "/n-queen-visual-react/static/css/main.b22df3b2.css.map",
+    "main.7b18568c.js.map": "/n-queen-visual-react/static/js/main.7b18568c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b22df3b2.css",
+    "static/js/main.7b18568c.js"
+  ]
+}
