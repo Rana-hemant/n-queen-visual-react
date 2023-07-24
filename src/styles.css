@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+
+body {
+  background-color: #edb879;
+}
+.ChessBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  perspective: 800px;
+}
+
+.ChessBoard div {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.ChessBoard div.white {
+  background-color: #f0d9b5;
+}
+
+.ChessBoard div.black {
+  background-color: #b58863;
+}
+
+.ChessBoard div img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(20px);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.ChessBoard div:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+}
+
+.ChessBoard div:hover img {
+  transform: translateZ(30px);
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Yatra One", cursive;
+  margin: 50px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: #efe5be;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: #efe5be;
+  text-decoration: underline;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.input-box input {
+  text-align: center;
+  padding: 1px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: #edb879;
+  color: #333;
+}
+
+label {
+  font-size: 20px;
+  font-family: "Yatra One", cursive;
+}
