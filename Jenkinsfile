@@ -21,8 +21,14 @@ pipeline {
         stage('Push Docker Image to DockerHub') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'chessboard-token', variable: 'DOCKER_TOKEN')]) {
+                    // Use withCredentials to inject Docker credentials into environment variables
+                    withCredentials([usernamePassword(credentialsId: 'chessboard-token', 
+                                                      usernameVariable: 'DOCKER_USERNAME', 
+                                                      passwordVariable: 'DOCKER_TOKEN')]) {
+                        // Login to Docker Hub using the injected environment variables
                         sh 'echo $DOCKER_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin'
+
+                        // Push the Docker image to DockerHub
                         sh 'docker push $DOCKER_IMAGE'
                     }
                 }
