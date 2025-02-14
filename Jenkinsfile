@@ -35,6 +35,9 @@ pipeline {
             }
         }
         stage('Deploy to Kubernetes') {
+            environment {
+                KUBECONFIG = '/home/jenkins/.kube/config'  // Path to the kubeconfig file in Jenkins
+            }
             steps {
                 script {
                     // Deploy to Kubernetes (Minikube)
