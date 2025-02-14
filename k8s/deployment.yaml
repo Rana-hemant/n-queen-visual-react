@@ -13,7 +13,7 @@ spec:
         app: react-chessboard
     spec:
       containers:
-      - name: react-chessboard
-        image: your-dockerhub-username/react-chessboard:v1
+      - name: react-chessboard-container
+        image: hemantrana/react-chessboard:latest
         ports:
         - containerPort: 80
