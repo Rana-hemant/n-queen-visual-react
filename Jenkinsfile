@@ -39,8 +39,8 @@ pipeline {
                 script {
                     // Deploy to Kubernetes (Minikube)
                     sh '''
-                        kubectl set image deployment/react-chessboard react-chessboard=$DOCKER_IMAGE
-                        kubectl rollout restart deployment/react-chessboard
+                        kubectl apply -f deployment.yaml
+                        kubectl apply -f service.yaml
                     '''
                 }
             }
