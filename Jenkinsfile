@@ -39,8 +39,8 @@ pipeline {
                 script {
                     // Deploy to Kubernetes (Minikube)
                     sh '''
-                        kubectl apply -f deployment.yaml
-                        kubectl apply -f service.yaml
+                        kubectl apply -f k8s/deployment.yaml
+                        kubectl apply -f k8s/service.yaml
                     '''
                 }
             }
