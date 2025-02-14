@@ -37,10 +37,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    // Deploy to Kubernetes (Minikube or AWS EKS)
+                    // Deploy to Kubernetes (Minikube)
                     sh '''
-                        kubectl set image deployment/frontend frontend=$DOCKER_IMAGE
-                        kubectl rollout restart deployment/frontend
+                        kubectl set image deployment/react-chessboard react-chessboard=$DOCKER_IMAGE
+                        kubectl rollout restart deployment/react-chessboard
                     '''
                 }
             }
